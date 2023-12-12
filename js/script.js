@@ -61,3 +61,31 @@ for (let i = 0; i < membersList.length; i++) {
     console.log(member);
 
 }
+
+/* MILESTONE 2 */
+
+// Ciclo per stampare all'interno della DOM le info di ogni membro
+for (let i = 0; i < membersList.length; i++) {
+    const memberName = membersList[i].name;
+    const memberRole = membersList[i].role;
+    const memberImage = membersList[i].image;
+
+    // Seleziono il nodo della DOM
+    const containerRowEl = document.querySelector('.container .row');
+
+    // Salvo in una variabile il markup di ogni membro
+    const memberMarkup = ` 
+    <div class="col">
+        <h4>${memberName}</h4>
+        <p>${memberRole}</p>
+        <p class="text-decoration-underline">${memberImage}</p>
+    </div>
+    `
+    // Inserisco il markup di ogni membro ad ogni iterazione all'interno della DOM
+    containerRowEl.insertAdjacentHTML("beforeend", memberMarkup);
+
+}
+
+
+
+
