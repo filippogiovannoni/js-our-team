@@ -75,10 +75,10 @@ for (let i = 0; i < membersList.length; i++) {
 
     // Salvo in una variabile il markup di ogni membro
     const memberMarkup = ` 
-    <div class="col">
-        <h4 class="mt-5">${memberName}</h4>
+    <div class="col m-3 card shadow">
+        <h4 class="my-3">${memberName}</h4>
         <p>${memberRole}</p>
-        <img src="./img/${memberImage}" alt="">
+        <img class="rounded-circle shadow mb-3 " src="./img/${memberImage}" alt="">
     </div>
     `
     // Inserisco il markup di ogni membro ad ogni iterazione all'interno della DOM
